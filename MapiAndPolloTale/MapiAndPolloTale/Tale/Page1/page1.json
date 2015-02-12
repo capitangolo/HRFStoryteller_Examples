@@ -1,0 +1,306 @@
+[
+ {
+ "id_view" : "fondo1",
+ "bounds": [0, 0, 1024, 768],
+ "position": [1024, 768],
+ "anchorPoint" : [1, 1],
+ "image" : "Fondo"
+ },
+ {
+ "id_view" : "Sol",
+ "bounds": [0, 0, 228, 231],
+ "position": [150, 150],
+ "opacity" : 1,
+ "anchorPoint" : [0.5, 0.5],
+ "image" : "Sol",
+ "layers" :[],
+ "animations" : [
+                 {
+                 "id_animation" : "rotar_sol",
+                 "keyPath" : "transform.rotation",
+                 "fromValue" : {
+                 "type" : "number",
+                 "value" : 0
+                 },
+                 "toValue" : {
+                 "type" : "number",
+                 "value" : 6.2830
+                 },
+                 "duration" : 2,
+                 "autoreverses" : "NO",
+                 "repeatCount" : 1,
+                 "timingFunction" : "EaseInEaseOut",
+                 "removedOnCompletion" : "NO"
+                 },
+                 {
+                 "id_animation" : "zoom_sol",
+                 "keyPath" : "transform.scale",
+                 "fromValue" : {
+                 "type" : "number",
+                 "value" : 1
+                 },
+                 "toValue" : {
+                 "type" : "number",
+                 "value" : 0.8
+                 },
+                 "duration" : 1,
+                 "autoreverses" : "YES",
+                 "repeatCount" : 1,
+                 "timingFunction" : "EaseInEaseOut",
+                 "removedOnCompletion" : "NO"
+                 }
+                 ],
+ "actions" : {
+     "tap" :
+     [     {"userInteractionEnabled" : "YES"},
+      [
+       {
+       "layer": "__all_layers_composition__",
+       "anims" : ["rotar_sol","zoom_sol"]
+       }
+       ]
+      ]
+ }
+ },
+ {
+ "id_view" : "Nube1",
+ "bounds": [0, 0, 120, 60],
+ "position": [-100, 200],
+ "opacity" : 0.8,
+ "anchorPoint" : [0, 0],
+ "image" : "Nube1",
+ "layers" :[],
+ "animations" : [
+                 {
+                 "id_animation" : "mover_nube_1",
+                 "keyPath" : "transform.translation.x",
+                 "fromValue" : {
+                 "type" : "number",
+                 "value" : -100
+                 },
+                 "toValue" : {
+                 "type" : "number",
+                 "value" : 1200
+                 },
+                 "duration" : 20,
+                 "autoreverses" : "NO",
+                 "repeatCount" : "INFINITY",
+                 "timingFunction" : "Linear",
+                 "removedOnCompletion" : "NO"
+                 },
+                 {
+                 "id_animation" : "mover_nube_1_2",
+                 "keyPath" : "transform.translation.y",
+                 "fromValue" : {
+                 "type" : "number",
+                 "value" : 0
+                 },
+                 "toValue" : {
+                 "type" : "number",
+                 "value" : 40
+                 },
+                 "duration" : 3,
+                 "autoreverses" : "YES",
+                 "repeatCount" : "INFINITY",
+                 "timingFunction" : "EaseInEaseOut",
+                 "removedOnCompletion" : "NO"
+                 }
+                 ],
+ "actions" : {
+ "inTime" :
+ [     0.0,
+  [
+   {
+   "layer": "__all_layers_composition__",
+   "anims" : ["mover_nube_1","mover_nube_1_2"]
+   }
+   ]
+  ]
+ }
+},
+ {
+ "id_view" : "Globo",
+ "bounds": [0, 0, 135, 247],
+ "position": [512, 250],
+ "opacity" : 1,
+ "anchorPoint" : [0.5, 0.5],
+ "image" : "Globo",
+ "layers" :[],
+ "animations" : [
+                 {
+                 "id_animation" : "subir_bajar_globo",
+                 "keyPath" : "transform.translation.y",
+                 "fromValue" : {
+                 "type" : "number",
+                 "value" : 0
+                 },
+                 "toValue" : {
+                 "type" : "number",
+                 "value" : 90
+                 },
+                 "duration" : 5,
+                 "autoreverses" : "YES",
+                 "repeatCount" : "INFINITY",
+                 "timingFunction" : "EaseInEaseOut",
+                 "removedOnCompletion" : "NO"
+                 },
+                 {
+                 "id_animation" : "mover_globo",
+                 "keyPath" : "transform.translation.x",
+                 "fromValue" : {
+                 "type" : "number",
+                 "value" : -100
+                 },
+                 "toValue" : {
+                 "type" : "number",
+                 "value" : 100
+                 },
+                 "duration" : 16,
+                 "autoreverses" : "YES",
+                 "repeatCount" : "INFINITY",
+                 "timingFunction" : "EaseInEaseOut",
+                 "removedOnCompletion" : "NO"
+                 },
+                 {
+                 "id_animation" : "zoom_globo",
+                 "keyPath" : "transform.scale",
+                 "fromValue" : {
+                 "type" : "number",
+                 "value" : 0.8
+                 },
+                 "toValue" : {
+                 "type" : "number",
+                 "value" : 1.2
+                 },
+                 "duration" : 20,
+                 "autoreverses" : "YES",
+                 "repeatCount" : "INFINITY",
+                 "timingFunction" : "EaseInEaseOut",
+                 "removedOnCompletion" : "NO"
+                 }
+                 ],
+ "actions" : {
+ "inTime" :
+ [     0.0,
+  [
+   {
+   "layer": "__all_layers_composition__",
+   "anims" : ["subir_bajar_globo","mover_globo","zoom_globo"]
+   }
+   ]
+  ]
+ }
+ },
+ {
+ "id_view" : "Nube2",
+ "bounds": [0, 0, 200, 73],
+ "position": [-500, 300],
+ "opacity" : 0.7,
+ "anchorPoint" : [0, 0],
+ "image" : "Nube2",
+ "layers" :[],
+ "animations" : [
+                 {
+                 "id_animation" : "mover_nube_2",
+                 "keyPath" : "transform.translation.x",
+                 "fromValue" : {
+                 "type" : "number",
+                 "value" : 0
+                 },
+                 "toValue" : {
+                 "type" : "number",
+                 "value" : 1800
+                 },
+                 "duration" : 10,
+                 "autoreverses" : "NO",
+                 "repeatCount" : "INFINITY",
+                 "timingFunction" : "Linear",
+                 "removedOnCompletion" : "NO"
+                 },
+                 {
+                 "id_animation" : "mover_nube_2_2",
+                 "keyPath" : "transform.translation.y",
+                 "fromValue" : {
+                 "type" : "number",
+                 "value" : 0
+                 },
+                 "toValue" : {
+                 "type" : "number",
+                 "value" : 40
+                 },
+                 "duration" : 3,
+                 "autoreverses" : "YES",
+                 "repeatCount" : "INFINITY",
+                 "timingFunction" : "EaseInEaseOut",
+                 "removedOnCompletion" : "NO"
+                 }
+                 ],
+ "actions" : {
+ "inTime" :
+ [     6.0,
+  [
+   {
+   "layer": "__all_layers_composition__",
+   "anims" : ["mover_nube_2","mover_nube_2_2"]
+   }
+   ]
+  ]
+ }
+ },
+ {
+ "id_view" : "Nube3",
+ "bounds": [0, 0, 330, 121],
+ "position": [-400, 570],
+ "opacity" : 0.5,
+ "anchorPoint" : [0, 0],
+ "image" : "Nube3",
+ "layers" :[],
+ "animations" : [
+                 {
+                 "id_animation" : "mover_nube_3",
+                 "keyPath" : "transform.translation.x",
+                 "fromValue" : {
+                 "type" : "number",
+                 "value" : 0
+                 },
+                 "toValue" : {
+                 "type" : "number",
+                 "value" : 1800
+                 },
+                 "duration" : 6,
+                 "autoreverses" : "NO",
+                 "repeatCount" : "INFINITY",
+                 "timingFunction" : "Linear",
+                 "removedOnCompletion" : "NO"
+                 },
+                 {
+                 "id_animation" : "mover_nube_3_2",
+                 "keyPath" : "transform.translation.y",
+                 "fromValue" : {
+                 "type" : "number",
+                 "value" : 0
+                 },
+                 "toValue" : {
+                 "type" : "number",
+                 "value" : 40
+                 },
+                 "duration" : 3,
+                 "autoreverses" : "YES",
+                 "repeatCount" : "INFINITY",
+                 "timingFunction" : "EaseInEaseOut",
+                 "removedOnCompletion" : "NO"
+                 }
+                 ],
+ "actions" : {
+ "inTime" :
+ [     10.0,
+  [
+   {
+   "layer": "__all_layers_composition__",
+   "anims" : ["mover_nube_3","mover_nube_3_2"]
+   }
+   ]
+  ]
+ }
+ }
+]

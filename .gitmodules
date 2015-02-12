@@ -1,0 +1,3 @@
+[submodule "HRFStoryteller"]
+	path = HRFStoryteller
+	url = git@github.com:torhector2/HRFStoryteller.git
